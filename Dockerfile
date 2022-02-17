@@ -1,5 +1,5 @@
-FROM ubuntu:16.04
-RUN apt-get update && apt-get install -y python python-pip
+FROM centos:7
+RUN yum update -y && yum install -y python python-pip
 RUN pip install --upgrade pip
 RUN pip install flask
 COPY app.py /opt/
